@@ -1,0 +1,33 @@
+body{
+    margin: 0px 10px;
+}
+
+.Navbar{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;  
+    height: 66px;
+    width: 66px;
+    border-color: #00FFFF;
+    border-radius: 50%;
+    background-color: transparent;
+}
+button:hover:active{
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+.icon{
+    color: #00FFFF;
+}

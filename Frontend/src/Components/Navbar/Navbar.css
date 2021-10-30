@@ -1,0 +1,25 @@
+body{
+    margin: 0px 10px;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;  
+    height: 66px;
+    width: 66px;
+    border-color: #00FFFF;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.button:hover{
+    box-shadow: 0 0 2px 0 #00d7c3 inset, 0 0 2px 2px #00d7c3;
+    border: 2px solid #00d7c3;
+    cursor: pointer;
+}
+
+.icon{
+    color: #00FFFF;
+}

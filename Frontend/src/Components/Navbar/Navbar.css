@@ -2,17 +2,9 @@ body{
     margin: 0px 10px;
 }
 
-.Navbar{
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    
-}
+
 .button {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 10px;  
@@ -22,10 +14,10 @@ body{
     border-radius: 50%;
     background-color: transparent;
 }
-button:hover:active{
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
+.button:hover{
+    box-shadow: 0 0 2px 0 #00d7c3 inset, 0 0 2px 2px #00d7c3;
+    border: 2px solid #00d7c3;
+    cursor: pointer;
 }
 
 .icon{

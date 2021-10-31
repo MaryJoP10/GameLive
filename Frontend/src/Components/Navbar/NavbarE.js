@@ -16,7 +16,8 @@ export const NavLink = styled(Link)`
     border-radius: 10px;
     width: 150px;
     height: 50px;
-    transition: 1.2s;
+    transition: 1.2
 }
+
 `
 

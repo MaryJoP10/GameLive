@@ -1,5 +1,4 @@
 import React from 'react';
-import {Nav, NavLink} from './NavbarE';
 import './Navbar.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faComments} from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +6,8 @@ import {faUser} from '@fortawesome/free-solid-svg-icons';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import logo from '../../Images/Logo.png'
-//NavLink to="/" activeStyleimg className="logo"NavLink
+import styled from 'styled-components'
+import {NavLink as Link} from 'react-router-dom'
                     
 const Navbar = () => {
     return(
@@ -32,6 +32,24 @@ const Navbar = () => {
         </>
     )
 }
+
+export const Nav = styled.nav`
+    background: black;
+    height: 105px;
+    width: 100%;
+    z-index: 100px;
+`
+
+
+export const NavLink = styled(Link)`
+&.active>.button{
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    transition: 1.2
+}
+
+`
 
 
 export default Navbar

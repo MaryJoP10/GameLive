@@ -3,6 +3,7 @@ body{
 }
 
 .button {
+    z-index: 20;
     margin: 10px;
     height: 66px;
     width: 66px;
@@ -10,11 +11,13 @@ body{
     border-radius: 50%;
     background-color: transparent;
     transition: 1.2s;
+    
 }
 .u{
     position: fixed;
     bottom: 20px;
     right: 0;
+    
 }
 .d{
     position: fixed;
@@ -35,10 +38,11 @@ body{
 .Logo{
     background-color: black;
     position: absolute;
+    z-index: 20;
     position: fixed;
     top: 0px;
     left: 0px;
-
+    
 }
 
 .button:hover{

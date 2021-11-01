@@ -3,16 +3,42 @@ body{
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;  
+    margin: 10px;
     height: 66px;
     width: 66px;
     border-color: #00FFFF;
     border-radius: 50%;
     background-color: transparent;
     transition: 1.2s;
+}
+.u{
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+}
+.d{
+    position: fixed;
+    bottom: 95px;
+    right: 0;
+}
+.t{
+    position: fixed;
+    bottom: 170px;
+    right: 0;
+}
+.c{
+    position: fixed;
+    bottom: 245px;
+    right: 0;
+}
+
+.Logo{
+    background-color: black;
+    position: absolute;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
 }
 
 .button:hover{

@@ -88,7 +88,6 @@ return (
 
 const ContenedorPrincipal = styled.div`
 position: relative;
-z-index:-1;
 `;
 
 const ContenedorSlideshow = styled.div`

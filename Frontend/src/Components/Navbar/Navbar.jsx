@@ -39,17 +39,18 @@ export const Nav = styled.nav`
     height: 105px;
     display: flex;
     justify-content: end;
-
 `
 
 
 export const NavLink = styled(Link)`
 &.active>.buttonN{
     border-radius: 10px;
-    transition: 1.2
-    box-shadow: 3px 3px 4px #7df8ec;
+    transition: 1.2;
+    border-color: #fccbcb;
+    .icon{
+        color: #fccbcb;
+    }
 }
-
 `
 
 export default Navbar

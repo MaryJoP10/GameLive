@@ -1,16 +1,5 @@
-/*
-
 * {
 	box-sizing: border-box;
-}
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
 }
 
 h1 {
@@ -95,6 +84,7 @@ input {
 }
 
 .container {
+	top: 50px;
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -215,5 +205,3 @@ input {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
-
-*/

@@ -1,16 +1,16 @@
 body{
     margin: 0px 10px;
+
 }
 
-.button {
-    margin: 10px;
+.buttonN {
+    margin: 20px;
     height: 66px;
     width: 66px;
-    border-color: white;
+    border-color: rgb(0, 204, 204);
     border-radius: 50%;
     background-color: transparent;
     transition: 1.2s;
-    
 }
 
 .Logo{
@@ -22,7 +22,7 @@ body{
 
 }
 
-.button:hover{
+.buttonN:hover{
     border: 2px solid #fccbcb;
     cursor: pointer;
     border-radius: 10px;
@@ -31,5 +31,5 @@ body{
 }
 
 .icon{
-    color: white;
+    color: rgb(0, 204, 204);
 }

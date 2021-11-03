@@ -22,7 +22,7 @@ const Signin = () => {
             <input type="text" class="form-control" placeholder="Usuario" />
 			<input type="email" class="form-control" placeholder="Email" />
 			<input type="password" class="form-control" placeholder="Contraseña" />
-			<button>Registrarse</button>
+			<button className="Iniciar">Registrarse</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -31,7 +31,7 @@ const Signin = () => {
 			<input type="text" class="form-control" placeholder="Usuario" />
 			<input type="password" class="form-control" placeholder="Contraseña" />
 			<Link to="/signin">¿Olvidaste tu contraseña?</Link>
-			<button>Ingresar</button>
+			<button className="Iniciar">Ingresar</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -39,12 +39,12 @@ const Signin = () => {
 			<div class="overlay-panel overlay-left">
 				<h1>¡Volviste!</h1>
 				<p>Ingresa para seguir conectado con esta gran comunidad.</p>
-				<button class="ghost" onClick={handleClick}>Iniciar Sesión</button>
+				<button className="ghost" onClick={handleClick}>Iniciar Sesión</button>
 			</div>
 			<div class="overlay-panel overlay-right">
 				<h1>¡Hola amiguito!</h1>
 				<p>Crea una cuenta para ser parte de esta bonita comunidad.</p>
-				<button class="ghost" onClick={handleClick}>Crear cuenta</button>
+				<button className="ghost" onClick={handleClick}>Crear cuenta</button>
 			</div>
 		</div>
 	</div>

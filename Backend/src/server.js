@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 const { port } = require("./config");
 
 //Inicializacion
@@ -9,6 +10,7 @@ const server = express();
 server.set("port", port);
 
 //Middlewares
+server.use(cors())
 server.use(morgan("dev"));
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));

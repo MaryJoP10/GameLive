@@ -14,6 +14,8 @@ module.exports = {
   async signin(req) {
     const { nombre_usuario, nick_usuario, email_usuario, contrasena_usuario } = req.body;
 
+    if(nombre_usuario === "") throw "ERR_DUP_ENTRY";
+
     const userCheck = await pool.query(`SELECT * FROM usuario WHERE nick_usuario = '${nick_usuario}';`);
 
     if (userCheck.rows[0]) throw "ERR_DUP_ENTRY";

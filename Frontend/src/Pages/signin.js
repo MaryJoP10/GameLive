@@ -1,9 +1,52 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import '../Styles/signin.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Signin = () => {
     const container = useRef(null);
+    const history = useHistory();
+    const [form, setForm] = useState({
+        name: "",
+        nickname: "",
+        email: "",
+        password: ""
+    })
+    const handleChange = (event) => {
+        setForm({
+            ...form, 
+            [event.target.name]: event.target.value
+        })
+    }
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const ob = {
+            nombre_usuario: form.name, 
+            nick_usuario: form.nickname, 
+            email_usuario: form.email, 
+            contrasena_usuario: form.password
+        }
+        fetch("http://localhost:8080/signin", {
+            method:"POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(ob)
+        })
+        .then((res) => res.json())
+        .then((result) => {
+            if(!result.valid){
+                alert("Hubo un error")
+            } else {
+                history.push("/")
+                setForm({
+                    name: "",
+                    nickname: "",
+                    email: "",
+                    password: ""
+                })
+            }
+        })
+    }
     const handleClick = () => {
         const { value } = container.current.classList
         if (value.includes("right-panel-active")) {
@@ -16,12 +59,12 @@ const Signin = () => {
     return (
         <div class="container" ref={container}>
             <div class="form-container sign-up-container">
-                <form action="#">
+                <form onSubmit={handleSubmit} action="#">
                     <h1>Crear cuenta</h1>
-                    <input type="text" class="form-control" placeholder="Nombre" />
-                    <input type="text" class="form-control" placeholder="Usuario" />
-                    <input type="email" class="form-control" placeholder="Email" />
-                    <input type="password" class="form-control" placeholder="Contraseña" />
+                    <input name="name" onChange={handleChange} value={form.name} type="text" class="form-control" placeholder="Nombre" />
+                    <input name="nickname" onChange={handleChange} value={form.nickname} type="text" class="form-control" placeholder="Usuario" />
+                    <input name="email" onChange={handleChange} value={form.email} type="email" class="form-control" placeholder="Email" />
+                    <input name="password" onChange={handleChange} value={form.password} type="password" class="form-control" placeholder="Contraseña" />
                     <button className="Iniciar">Registrarse</button>
                 </form>
             </div>
